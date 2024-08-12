@@ -1,40 +1,32 @@
-# Crickz
+# Crickz.
 
-Crickz is a dynamic and interactive web application developed using Vite and React, styled with Tailwind CSS, and enhanced with animations powered by GSAP.
+Crickz is a dynamic and interactive web application developed using React.js, styled with Tailwind CSS, and enhanced with animations powered by GSAP.
 
-## Table of Contents
+## Features
 
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Building for Production](#building-for-production)
-- [Contributing](#contributing)
-- [License](#license)
+- **Minimalistic User Interface**: With a focus on simplicity and ease of use, NoteNest offers a clean and intuitive user interface, minimizing distractions and optimizing productivity.
 
-## Installation
+- **Responsive Design**: NoteNest features a responsive design, ensuring a consistent and user-friendly experience across various devices, including desktops, tablets, and smartphones.
 
-To get started with this project, follow these steps:
+## Technologies Used
 
-1. **Clone the repository:**
+- **Frontend**: React.js
+- **Styling**: Tailwind css
+- **Animation**: GreenSock Animation Platform(GSAP)
 
-    ```sh
-    git clone https://github.com/Mukilan13/Crickz
-    ```
+## Getting Started
 
-2. **Navigate to the project directory:**
+To run NoteNest locally, follow these steps:
 
-    ```sh
-    cd Crickz
-    ```
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm run dev`.
 
-3. **Install the dependencies:**
+## Contributing
 
-    ```sh
-    npm install
-    ```
+Contributions to Crickz are welcome! If you have suggestions for new features, enhancements, or bug fixes, please feel free to submit a pull request.
 
-## Running the Project
+## License
 
-To run the project locally, use the following command:
-
-```sh
-npm run dev
+NoteNest is open-source software. Feel free to use, modify, and distribute the code as needed.
