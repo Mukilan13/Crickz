@@ -17,7 +17,7 @@ function App() {
       />
       <div className="banner w-full h-screen">
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <Slider direction={direction} />
+        <Slider direction={direction} isMenuOpen={isMenuOpen} />
       </div>
     </div>
   );

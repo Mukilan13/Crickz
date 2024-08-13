@@ -2,26 +2,31 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { stories } from "../Data/Slider_data";
 
-const Slider = ({ direction }) => {
+const Slider = ({ direction, isMenuOpen }) => {
   const [activeStory, setActiveStory] = useState(0);
   const progressRef = useRef(null);
 
   const contentUpdateDelay = 0.4;
   const storyDuration = 5000;
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    const storyInterval = setInterval(() => {
-      changeStory();
-    }, storyDuration);
+    if (!isMenuOpen) {
+      intervalRef.current = setInterval(() => {
+        changeStory();
+      }, storyDuration);
+    } else if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
 
-    return () => clearInterval(storyInterval);
-  }, [activeStory]);
+    return () => clearInterval(intervalRef.current);
+  }, [activeStory, isMenuOpen]);
 
   useEffect(() => {
-    if (progressRef.current) {
+    if (progressRef.current && !isMenuOpen) {
       animateIndexHighlight(progressRef.current);
     }
-  }, [activeStory]);
+  }, [activeStory, isMenuOpen]);
 
   useEffect(() => {
     const animateContent = () => {
@@ -39,13 +44,13 @@ const Slider = ({ direction }) => {
       });
     };
 
-    animateContent();
+    if (!isMenuOpen) {
+      animateContent();
+    }
 
     return () => gsap.killTweensOf(".profile-name p, .title-row h1");
-  }, [activeStory]);
+  }, [activeStory, isMenuOpen]);
 
-  /* The functions changeStory and changeStoryOnClick share a lot of similar logic. 
-  Consider refactoring the common logic into a separate function to adhere to the DRY (Don't Repeat Yourself) principle */
   const handleStoryChange = (newStory) => {
     setActiveStory(newStory);
     resetIndexHightlight(progressRef.current);

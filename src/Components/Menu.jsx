@@ -54,11 +54,13 @@ const Menu = ({ activeMenu, changeActiveLink, toggleMenu, isMenuOpen }) => {
                           key={index}
                           className="rounded-md"
                           ref={videoRef}
-                          src={link.menuVideo}
-                          autoPlay
-                          loop
-                          preload="auto"
-                        ></video>
+                        >
+                          <source
+                            src={link.menuVideo}
+                            preload="auto"
+                            typeof="video/mp4"
+                          />
+                        </video>
                       )
                   )}
                   <div className="bottom flex items-center justify-between px-1">
