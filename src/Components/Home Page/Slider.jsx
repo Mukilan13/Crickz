@@ -10,9 +10,6 @@ const Slider = ({ direction, isMenuOpen, isLoaderAnimated }) => {
   const storyDuration = 5000;
   const intervalRef = useRef(null);
 
-  console.log(isLoaderAnimated);
-  
-
   useEffect(() => {
     if (!isMenuOpen && isLoaderAnimated) {
       intervalRef.current = setInterval(() => {
