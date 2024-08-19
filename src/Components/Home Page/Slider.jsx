@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { stories } from "../../Data/Slider_data";
 
-const Slider = ({ direction, isMenuOpen }) => {
+const Slider = ({ direction, isMenuOpen, isLoaderAnimated }) => {
   const [activeStory, setActiveStory] = useState(0);
   const progressRef = useRef(null);
 
@@ -10,8 +10,11 @@ const Slider = ({ direction, isMenuOpen }) => {
   const storyDuration = 5000;
   const intervalRef = useRef(null);
 
+  console.log(isLoaderAnimated);
+  
+
   useEffect(() => {
-    if (!isMenuOpen) {
+    if (!isMenuOpen && isLoaderAnimated) {
       intervalRef.current = setInterval(() => {
         changeStory();
       }, storyDuration);
@@ -20,13 +23,13 @@ const Slider = ({ direction, isMenuOpen }) => {
     }
 
     return () => clearInterval(intervalRef.current);
-  }, [activeStory, isMenuOpen]);
+  }, [activeStory, isMenuOpen, isLoaderAnimated]);
 
   useEffect(() => {
-    if (progressRef.current && !isMenuOpen) {
+    if (progressRef.current && !isMenuOpen && isLoaderAnimated) {
       animateIndexHighlight(progressRef.current);
     }
-  }, [activeStory, isMenuOpen]);
+  }, [activeStory, isMenuOpen, isLoaderAnimated]);
 
   useEffect(() => {
     const animateContent = () => {

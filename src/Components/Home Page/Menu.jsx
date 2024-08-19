@@ -54,6 +54,7 @@ const Menu = ({ activeMenu, changeActiveLink, toggleMenu, isMenuOpen }) => {
                           key={index}
                           className="rounded-md"
                           ref={videoRef}
+                          loop
                         >
                           <source
                             src={link.menuVideo}
