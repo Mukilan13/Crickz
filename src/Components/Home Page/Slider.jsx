@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { stories } from "../Data/Slider_data";
+import { stories } from "../../Data/Slider_data";
 
 const Slider = ({ direction, isMenuOpen }) => {
   const [activeStory, setActiveStory] = useState(0);

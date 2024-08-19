@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import gsap from "gsap";
 import Menu from "./Menu";
 
@@ -43,7 +43,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <>
-      <header className="fixed top-0 z-10 w-full flex items-center justify-between py-5 sm:px-10 px-4">
+      <header className="absolute top-0 z-10 w-full flex items-center justify-between py-5 sm:px-10 px-4">
         <div className="logo flex items-center justify-center gap-4">
           <img src={Logo} alt="logo" className="w-[50px]" />
           <h1 className="text-2xl flex items-center gap-1">

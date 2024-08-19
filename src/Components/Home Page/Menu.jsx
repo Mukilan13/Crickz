@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { MenuLinks, BottomMenus } from "../Data/Menu_data";
-import Logo from "../assets/Logo.png";
-import IndiaLogo from "../assets/India-Logo.png";
+import { MenuLinks, BottomMenus } from "../../Data/Menu_data";
+import Logo from "../../assets/Logo.png";
+import IndiaLogo from "../../assets/India-Logo.png";
 import CloseSharpIcon from "@mui/icons-material/CloseSharp";
 import VolumeUpRoundedIcon from "@mui/icons-material/VolumeUpRounded";
 import VolumeOffRoundedIcon from "@mui/icons-material/VolumeOffRounded";
