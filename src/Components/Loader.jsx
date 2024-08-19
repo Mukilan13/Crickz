@@ -17,7 +17,7 @@ const Loader = ({ isLoaderAnimated, setIsLoaderAnimated }) => {
       opacity: 1,
     });
 
-    gsap.to(".logo", {
+    gsap.to(".loader .logo", {
       opacity: 0,
       duration: 0.5,
       delay: 2,
@@ -34,7 +34,7 @@ const Loader = ({ isLoaderAnimated, setIsLoaderAnimated }) => {
   }, []);
   return (
     <div
-      className={`loader bg-black z-30 w-screen h-screen ${
+      className={`loader absolute top-0 left-0 z-40 bg-black w-screen h-screen ${
         isLoaderAnimated ? "hidden" : "flex"
       } items-center justify-center`}
     >

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Cursor from "../Cursor";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
+import Chumma from "./Chumma";
 
 const Home = ({ isLoaderAnimated }) => {
   const [direction, setDirection] = useState("next");
@@ -22,6 +23,7 @@ const Home = ({ isLoaderAnimated }) => {
           isLoaderAnimated={isLoaderAnimated}
         />
       </div>
+      {isLoaderAnimated && <Chumma />}
     </div>
   );
 };
