@@ -25,8 +25,8 @@ const Loader = ({ isLoaderAnimated, setIsLoaderAnimated }) => {
 
     gsap.to(".loader", {
       height: 0,
-      duration: 0.5,
-      delay: 3,
+      duration: 0.3,
+      delay: 2.5,
       onComplete: () => {
         setIsLoaderAnimated(true);
       },
