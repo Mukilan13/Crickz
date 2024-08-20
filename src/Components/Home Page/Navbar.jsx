@@ -51,7 +51,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
           </h1>
         </div>
         <div className="menu-toggle lg:cursor-none cursor-pointer" onClick={toggleMenu}>
-          <p>Menu</p>
+          <p className="select-none">Menu</p>
         </div>
       </header>
 

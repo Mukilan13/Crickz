@@ -38,10 +38,10 @@ const Loader = ({ isLoaderAnimated, setIsLoaderAnimated }) => {
         isLoaderAnimated ? "hidden" : "flex"
       } items-center justify-center`}
     >
-      <div className="logo relative px-14 py-4 flex items-center justify-center gap-4">
+      <div className="logo relative ml-[80px] px-14 py-4 flex items-center justify-center gap-4">
         <img
           src={logo}
-          alt=""
+          alt="logo"
           className="absolute -left-4 z-40 w-[60px] translate-x-[180px]"
         />
         <h1 className="text-4xl opacity-0 -translate-x-[80px]">Crickz.</h1>
